@@ -61,7 +61,7 @@ export default function ExperienceSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-white text-[48px] lg:text-[56px] font-medium text-center mb-12 lg:mb-16 tracking-tight"
+          className="text-white font-clash font-medium text-[28px] min-[360px]:text-[32px] min-[414px]:text-[38px] sm:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.03em] text-center mb-12 lg:mb-16"
         >
           Experiences
         </motion.h2>

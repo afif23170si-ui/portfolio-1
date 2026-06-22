@@ -86,7 +86,7 @@ export const projects: Project[] = [
     summary:
       "Full eco-product store with cart animations, and payment integration.",
     tech: ["WordPress", "WooCommerce", "ACF", "Elementor"],
-    image: "/screenshot/Screenshot 2026-06-21 at 18.37.56.png",
+    image: "/images/project/project-1.avif",
     url: "#",
   },
   {
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     summary:
       "Fast, SEO-friendly blog with clean UI, dynamic content, and newsletter integration.",
     tech: ["WordPress", "WPBakery", "Mailchimp", "RankMath SEO"],
-    image: "/screenshot/Screenshot 2026-06-21 at 18.37.56.png",
+    image: "/images/project/project-2.avif",
     url: "#",
   },
   {
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     summary:
       "Complete UI/UX design for a task manager app with prototypes and usability testing.",
     tech: ["Figma", "Framer", "Maze"],
-    image: "/screenshot/Screenshot 2026-06-21 at 18.37.56.png",
+    image: "/images/project/project-3.avif",
     url: "#",
   },
 ];

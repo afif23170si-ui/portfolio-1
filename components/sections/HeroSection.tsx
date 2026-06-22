@@ -221,7 +221,7 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src="/images/hero-1.PNG"
+                  src="/images/hero-hover.webp"
                   alt="Afif Ramadhan Reveal"
                   className="absolute top-0 w-full h-[calc(100%-250px)] object-contain object-bottom translate-y-24 lg:translate-y-36 lg:translate-x-[30px]"
                 />

@@ -32,9 +32,9 @@ export default function TestimonialsSection() {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white text-[48px] lg:text-[56px] font-medium tracking-tight mb-3"
+            className="text-white font-clash font-medium text-[28px] min-[360px]:text-[32px] min-[414px]:text-[38px] sm:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.03em] mb-3"
           >
             What Clients Say
           </motion.h2>
@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-[#6b7280] text-[15px]"
+            className="text-white text-[15px] lg:text-[17px] font-light leading-relaxed"
           >
             A few kind words from the people I&apos;ve worked with.
           </motion.p>

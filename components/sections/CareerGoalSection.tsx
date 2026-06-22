@@ -209,7 +209,7 @@ export default function CareerGoalSection() {
             {/* Right Bracket Border */}
             <div className="absolute top-0 bottom-0 right-0 w-[25%] lg:w-[15%] border-r border-t border-b border-[#aae01a] rounded-r-[16px] drop-shadow-[0_0_6px_rgba(170,224,26,0.5)] pointer-events-none" />
 
-            <h2 className="text-white text-[36px] lg:text-[48px] font-bold tracking-[-0.02em] mb-4 text-center">
+            <h2 className="text-white font-clash font-medium text-[28px] min-[360px]:text-[32px] min-[414px]:text-[38px] sm:text-[42px] lg:text-[48px] leading-[1.05] tracking-[-0.03em] mb-4 text-center">
               Career Goal
             </h2>
             <p className="text-white text-center text-[15px] lg:text-[17px] font-light leading-relaxed max-w-[420px]">
@@ -220,16 +220,16 @@ export default function CareerGoalSection() {
           </motion.div>
 
           {/* Left Icons */}
-          <SquircleIcon src="/images/logo-career-goal/wp-logo.svg" x={9} y={9} delay={0.4} />
-          <SquircleIcon src="/images/logo-career-goal/a8p73vKWJPimbgBYjTyhjWHzo0.svg" x={20} y={38} delay={0.5} />
-          <SquircleIcon src="/images/logo-career-goal/2RlWho69FnRfnyqt2nB2wQZagg.svg" x={13} y={62} delay={0.6} />
-          <SquircleIcon src="/images/logo-career-goal/figma-logo.png" x={12} y={85} delay={0.7} />
+          <SquircleIcon src="/images/career/wp-logo.svg" x={9} y={9} delay={0.4} />
+          <SquircleIcon src="/images/career/framer-logo.svg" x={20} y={38} delay={0.5} />
+          <SquircleIcon src="/images/career/copy-logo.svg" x={13} y={62} delay={0.6} />
+          <SquircleIcon src="/images/career/figma-logo.png" x={12} y={85} delay={0.7} />
 
           {/* Right Icons */}
-          <SquircleIcon src="/images/logo-career-goal/xd-logo.svg" x={91} y={9} delay={0.4} />
-          <SquircleIcon src="/images/logo-career-goal/6OfRGcEpCMAntiurJbe1vaVp9q8.svg" x={79} y={38} delay={0.5} />
-          <SquircleIcon src="/images/logo-career-goal/aNvX0RQLThR0gZ6SroYTrx8Ic.svg" x={87} y={62} delay={0.6} />
-          <SquircleIcon src="/images/logo-career-goal/javascript-logo.svg" x={88} y={85} delay={0.7} />
+          <SquircleIcon src="/images/career/xd-logo.svg" x={91} y={9} delay={0.4} />
+          <SquircleIcon src="/images/career/html-logo.svg" x={79} y={38} delay={0.5} />
+          <SquircleIcon src="/images/career/css-logo.svg" x={87} y={62} delay={0.6} />
+          <SquircleIcon src="/images/career/javascript-logo.svg" x={88} y={85} delay={0.7} />
         </div>
       </div>
 
@@ -237,10 +237,10 @@ export default function CareerGoalSection() {
       <div className="lg:hidden flex flex-col items-center px-4 py-8 relative z-10">
         {/* Top Icons Row */}
         <div className="flex gap-3 justify-center mb-8">
-          <MobileSquircleIcon src="/images/logo-career-goal/wp-logo.svg" delay={0.1} />
-          <MobileSquircleIcon src="/images/logo-career-goal/a8p73vKWJPimbgBYjTyhjWHzo0.svg" delay={0.2} />
-          <MobileSquircleIcon src="/images/logo-career-goal/figma-logo.png" delay={0.3} />
-          <MobileSquircleIcon src="/images/logo-career-goal/2RlWho69FnRfnyqt2nB2wQZagg.svg" delay={0.4} />
+          <MobileSquircleIcon src="/images/career/wp-logo.svg" delay={0.1} />
+          <MobileSquircleIcon src="/images/career/framer-logo.svg" delay={0.2} />
+          <MobileSquircleIcon src="/images/career/figma-logo.png" delay={0.3} />
+          <MobileSquircleIcon src="/images/career/copy-logo.svg" delay={0.4} />
         </div>
 
         {/* Center Card */}
@@ -256,7 +256,7 @@ export default function CareerGoalSection() {
           {/* Right Bracket Border */}
           <div className="absolute top-0 bottom-0 right-0 w-[15%] border-r border-t border-b border-[#aae01a] rounded-r-[16px] drop-shadow-[0_0_6px_rgba(170,224,26,0.5)] pointer-events-none" />
 
-          <h2 className="text-white text-[32px] font-bold tracking-[-0.02em] mb-4 text-center">
+          <h2 className="text-white font-clash font-medium text-[28px] min-[360px]:text-[32px] min-[414px]:text-[38px] sm:text-[42px] leading-[1.05] tracking-[-0.03em] mb-4 text-center">
             Career Goal
           </h2>
           <p className="text-white text-center text-[15px] font-light leading-relaxed max-w-[280px]">
@@ -268,10 +268,10 @@ export default function CareerGoalSection() {
 
         {/* Bottom Icons Row */}
         <div className="flex gap-3 justify-center">
-          <MobileSquircleIcon src="/images/logo-career-goal/xd-logo.svg" delay={0.5} />
-          <MobileSquircleIcon src="/images/logo-career-goal/6OfRGcEpCMAntiurJbe1vaVp9q8.svg" delay={0.6} />
-          <MobileSquircleIcon src="/images/logo-career-goal/javascript-logo.svg" delay={0.7} />
-          <MobileSquircleIcon src="/images/logo-career-goal/aNvX0RQLThR0gZ6SroYTrx8Ic.svg" delay={0.8} />
+          <MobileSquircleIcon src="/images/career/xd-logo.svg" delay={0.5} />
+          <MobileSquircleIcon src="/images/career/html-logo.svg" delay={0.6} />
+          <MobileSquircleIcon src="/images/career/javascript-logo.svg" delay={0.7} />
+          <MobileSquircleIcon src="/images/career/css-logo.svg" delay={0.8} />
         </div>
       </div>
 

@@ -20,27 +20,29 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         delay: index * 0.12,
         ease: [0.22, 1, 0.36, 1],
       }}
+      className="sticky"
+      style={{ top: `calc(120px + ${index * 30}px)` }}
     >
       <motion.div
         whileHover={{ y: -3 }}
         transition={{ duration: 0.25 }}
         className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-2xl overflow-hidden hover:border-[#2a2a2a] transition-colors"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-0">
           {/* LEFT: Info */}
           <div className="p-8 lg:p-10 flex flex-col justify-between">
             <div>
               <h3 className="text-white font-bold text-[26px] lg:text-[28px] mb-4 leading-tight">
                 {project.title}
               </h3>
-              <p className="text-[#6b7280] text-[14px] mb-2">
+              <p className="text-[#6b7280] text-[15px] lg:text-[17px] font-light leading-relaxed mb-2">
                 <span className="text-[#b8e020]">Type:</span> {project.type}
               </p>
-              <p className="text-[#b8b8b8] text-[14px] leading-relaxed mb-3">
+              <p className="text-[#b8b8b8] text-[15px] lg:text-[17px] font-light leading-relaxed mb-3">
                 <span className="text-[#6b7280]">Summary:</span>{" "}
                 {project.summary}
               </p>
-              <p className="text-[#6b7280] text-[14px]">
+              <p className="text-[#6b7280] text-[15px] lg:text-[17px] font-light leading-relaxed">
                 <span className="text-[#b8e020]">Tech:</span>{" "}
                 {project.tech.join(", ")}
               </p>
@@ -70,7 +72,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <motion.div
                   variants={{
                     initial: { scale: 1, backgroundColor: "#c8f135" },
-                    hover: { scale: 1.02, backgroundColor: "#b8e020" }
+                    hover: { scale: 1, backgroundColor: "#b8e020" }
                   }}
                   transition={{ duration: 0.2 }}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#c8f135] text-black font-bold text-[15px] rounded-[10px] relative z-10"
@@ -93,14 +95,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           {/* RIGHT: Screenshot */}
-          <div className="relative bg-[#12122a] rounded-2xl m-4 overflow-hidden min-h-[300px] lg:min-h-[340px]">
+          <div className="relative bg-[#12122a] rounded-2xl m-4 overflow-hidden aspect-[16/10] self-center">
             {/* Browser chrome dots */}
             <div className="absolute top-3 left-4 flex gap-1.5 z-10">
               <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
               <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
               <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
             </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={project.image}
               alt={project.title}

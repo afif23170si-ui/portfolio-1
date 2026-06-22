@@ -92,7 +92,7 @@ export default function Navbar() {
             <motion.div
               variants={{
                 initial: { scale: 1, backgroundColor: "#c8f135" },
-                hover: { scale: 1.02, backgroundColor: "#b8e020" }
+                hover: { scale: 1, backgroundColor: "#b8e020" }
               }}
               transition={{ duration: 0.2 }}
               className="px-7 py-3 bg-[#c8f135] text-black font-bold text-[15px] rounded-[10px] relative z-10"

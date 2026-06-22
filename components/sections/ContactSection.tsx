@@ -52,9 +52,9 @@ export default function ContactSection() {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white text-[48px] lg:text-[56px] font-medium tracking-tight mb-3"
+            className="text-white font-clash font-medium text-[28px] min-[360px]:text-[32px] min-[414px]:text-[38px] sm:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.03em] mb-3"
           >
             Let&apos;s Work Together
           </motion.h2>
@@ -63,7 +63,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-[#6b7280] text-[15px]"
+            className="text-white text-[15px] lg:text-[17px] font-light leading-relaxed"
           >
             Have a project in mind, a question, or just want to say hello?
             I&apos;d love to hear from you.
@@ -148,18 +148,46 @@ export default function ContactSection() {
             </motion.div>
 
             {/* Submit */}
-            <div>
-              <div className="w-14 h-[2px] bg-[#c8f135] mb-3 rounded-full" />
+            <div className="mt-4">
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.03, backgroundColor: "#b8e020" }}
+                initial="initial"
+                whileHover="hover"
                 whileTap={{ scale: 0.97 }}
-                transition={{ duration: 0.2 }}
-                className="bg-[#c8f135] text-black font-bold text-[15px] px-8 py-3 rounded-[10px] cursor-pointer"
+                className="relative inline-block cursor-pointer"
               >
-                {submitted ? "✓ Message Sent!" : "Submit"}
+                {/* Top Right Floating Line */}
+                <motion.span
+                  variants={{
+                    initial: { x: 0, y: 0, opacity: 1 },
+                    hover: { x: -30, y: 10, opacity: 0 }
+                  }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  className="absolute -top-[10px] -right-[6px] w-12 h-[3px] bg-[#c8f135] rounded-full pointer-events-none"
+                />
+
+                {/* Main Button */}
+                <motion.div
+                  variants={{
+                    initial: { scale: 1, backgroundColor: "#c8f135" },
+                    hover: { scale: 1, backgroundColor: "#b8e020" }
+                  }}
+                  transition={{ duration: 0.2 }}
+                  className="bg-[#c8f135] text-black font-bold text-[15px] px-8 py-3 rounded-[10px] relative z-10 inline-block"
+                >
+                  {submitted ? "✓ Message Sent!" : "Submit"}
+                </motion.div>
+
+                {/* Bottom Left Floating Line */}
+                <motion.span
+                  variants={{
+                    initial: { x: 0, y: 0, opacity: 1 },
+                    hover: { x: 30, y: -10, opacity: 0 }
+                  }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  className="absolute -bottom-[10px] -left-[6px] w-12 h-[3px] bg-[#c8f135] rounded-full pointer-events-none"
+                />
               </motion.button>
-              <div className="w-14 h-[2px] bg-[#c8f135] mt-3 rounded-full" />
             </div>
           </form>
         </motion.div>
