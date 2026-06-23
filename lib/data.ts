@@ -30,7 +30,7 @@ export interface Testimonial {
 export const experiences: Experience[] = [
   {
     id: "exp-1",
-    logo: "/images/experience/cybersama-technology.png",
+    logo: "/images/experience/1.svg",
     title: "Web Developer",
     company: "Cybersama Technology",
     date: "Present",
@@ -42,7 +42,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "exp-2",
-    logo: "/images/experience/nurulfikri-academy.jpeg",
+    logo: "/images/experience/2.svg",
     title: "UI/UX Designer",
     company: "Nurulfikri Academy",
     date: "May 2024",
@@ -54,7 +54,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "exp-3",
-    logo: "WV",
+    logo: "/images/experience/3.svg",
     title: "Frontend Developer",
     company: "WebVibe Agency",
     date: "Jun 2021",
@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "exp-4",
-    logo: "IV",
+    logo: "/images/experience/4.svg",
     title: "Product Design Intern",
     company: "InVision (Remote)",
     date: "Apr 2020",
@@ -116,7 +116,7 @@ export const testimonials: Testimonial[] = [
     id: "test-1",
     name: "Olivia Brooks",
     role: "Marketing Manager",
-    avatar: "/avatars/olivia.png",
+    avatar: "/images/avatars/avatar-1.avif",
     quote:
       "Afif Ramadhan is our go-to expert for all things WordPress. He built a custom site for our brand that looks incredible and is super easy to manage. His communication and turnaround time are top-notch.",
     rating: 5,
@@ -126,7 +126,7 @@ export const testimonials: Testimonial[] = [
     id: "test-2",
     name: "Michael Carter",
     role: "CTO",
-    avatar: "/avatars/michael.png",
+    avatar: "/images/avatars/avatar-2.avif",
     quote:
       "Afif Ramadhan transformed our outdated dashboard into a sleek, user-friendly interface that our users love. His approach to UX is both strategic and empathetic — highly recommended!",
     rating: 5,
@@ -136,11 +136,21 @@ export const testimonials: Testimonial[] = [
     id: "test-3",
     name: "Emily Chen",
     role: "Founder",
-    avatar: "/avatars/emily.png",
+    avatar: "/images/avatars/avatar-3.avif",
     quote:
       "We hired Afif Ramadhan for a time-sensitive landing page project, and he delivered it ahead of schedule with pixel-perfect precision.",
     rating: 5,
     date: "Oct 23, 2025",
+  },
+  {
+    id: "test-4",
+    name: "James Wilson",
+    role: "Product Designer",
+    avatar: "/images/avatars/avatar-1.avif",
+    quote:
+      "Working with Afif Ramadhan was an absolute pleasure. He translated our design vision into a fully functional product seamlessly and efficiently.",
+    rating: 5,
+    date: "Feb 10, 2026",
   },
 ];
 

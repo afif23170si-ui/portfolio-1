@@ -54,7 +54,7 @@ export function ExperienceCard({
                   <img
                     src={exp.logo}
                     alt={exp.company}
-                    className="w-full h-full object-cover rounded-full p-1.5"
+                    className="w-full h-full object-contain p-2.5 md:p-3"
                   />
                 ) : (
                   <span className="text-sm font-bold text-[#c8f135]">

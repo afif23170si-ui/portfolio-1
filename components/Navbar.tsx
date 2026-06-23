@@ -85,7 +85,7 @@ export default function Navbar() {
                 hover: { x: -30, y: 10, opacity: 0 }
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="absolute -top-[10px] -right-[6px] w-12 h-[3px] bg-[#c8f135]"
+              className="absolute -top-[10px] right-0 w-12 h-[3px] bg-[#c8f135]"
             />
 
             {/* Main Button */}
@@ -107,7 +107,7 @@ export default function Navbar() {
                 hover: { x: 30, y: -10, opacity: 0 }
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="absolute -bottom-[10px] -left-[6px] w-12 h-[3px] bg-[#c8f135]"
+              className="absolute -bottom-[10px] left-0 w-12 h-[3px] bg-[#c8f135]"
             />
           </motion.div>
         </nav>

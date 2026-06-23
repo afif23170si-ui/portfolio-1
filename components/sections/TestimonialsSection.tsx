@@ -10,19 +10,21 @@ import { slideVariants } from "@/lib/animations";
 const ITEMS_PER_PAGE = 3;
 
 export default function TestimonialsSection() {
-  const [page, setPage] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
   const slideDir = useRef(1);
-
-  const totalPages = Math.ceil(testimonials.length / ITEMS_PER_PAGE);
-  const currentTestimonials = testimonials.slice(
-    page * ITEMS_PER_PAGE,
-    page * ITEMS_PER_PAGE + ITEMS_PER_PAGE
-  );
 
   const paginate = (dir: 1 | -1) => {
     slideDir.current = dir;
-    setPage((prev) => (prev + dir + totalPages) % totalPages);
+    setStartIndex((prev) => prev + dir);
   };
+
+  const visibleTestimonials = [];
+  for (let i = 0; i < 3; i++) {
+    const index = startIndex + i;
+    const arrayIndex = ((index % testimonials.length) + testimonials.length) % testimonials.length;
+    const t = testimonials[arrayIndex];
+    visibleTestimonials.push({ ...t, uniqueKey: `${t.id}-${index}` });
+  }
 
   return (
     <section id="testimonials" className="bg-[#000000] py-20 lg:py-28">
@@ -50,25 +52,29 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Cards with AnimatePresence slider */}
-        <div className="relative overflow-hidden mb-8">
-          <AnimatePresence mode="wait" custom={slideDir.current}>
-            <motion.div
-              key={page}
-              custom={slideDir.current}
-              variants={slideVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-                opacity: { duration: 0.3 },
-              }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-            >
-              {currentTestimonials.map((t) => (
-                <TestimonialCard key={t.id} testimonial={t} />
+        <div className="relative overflow-hidden -m-4 p-4 mb-4">
+          <AnimatePresence mode="popLayout" custom={slideDir.current}>
+            <div className="flex gap-5">
+              {visibleTestimonials.map((t) => (
+                <motion.div
+                  key={t.uniqueKey}
+                  layout
+                  custom={slideDir.current}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+                    opacity: { duration: 0.5 },
+                    layout: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+                  }}
+                  className="w-full md:w-[calc(50%-10px)] lg:w-[calc(33.333%-13.33px)] flex-shrink-0"
+                >
+                  <TestimonialCard testimonial={t} />
+                </motion.div>
               ))}
-            </motion.div>
+            </div>
           </AnimatePresence>
         </div>
 
@@ -81,7 +87,7 @@ export default function TestimonialsSection() {
             aria-label="Previous testimonials"
             className="w-12 h-12 rounded-full bg-[#c8f135] flex items-center justify-center hover:bg-[#b8e020] transition-colors"
           >
-            <ChevronLeft className="w-5 h-5 text-white" />
+            <ChevronLeft className="w-5 h-5 text-black" />
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.08 }}
@@ -90,7 +96,7 @@ export default function TestimonialsSection() {
             aria-label="Next testimonials"
             className="w-12 h-12 rounded-full bg-[#c8f135] flex items-center justify-center hover:bg-[#b8e020] transition-colors"
           >
-            <ChevronRight className="w-5 h-5 text-white" />
+            <ChevronRight className="w-5 h-5 text-black" />
           </motion.button>
         </div>
       </div>

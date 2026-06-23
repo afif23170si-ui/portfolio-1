@@ -76,7 +76,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-2xl p-8 lg:p-12"
+          className="bg-[#0f0f0f] border border-[#4d4d4d] rounded-2xl px-4 py-8 lg:p-10"
         >
           <form onSubmit={handleSubmit}>
             {/* Row 1: 3 inputs */}
@@ -105,7 +105,7 @@ export default function ContactSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, [key]: e.target.value })
                       }
-                      className="w-full bg-[#0a0a0a] border border-[#2a2a2a] rounded-[10px] px-4 py-3 text-[#b8b8b8] text-[14px] pr-10 focus:outline-none focus:border-[#c8f135] transition-colors placeholder:text-[#3a3a3a]"
+                      className="w-full bg-[#0a0a0a] border border-[#4d4d4d] rounded-[10px] px-4 py-3 text-[#b8b8b8] text-[14px] pr-10 focus:outline-none focus:border-[#c8f135] transition-colors placeholder:text-[#3a3a3a]"
                     />
                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[#c8f135]">
                       {icon}
@@ -139,7 +139,7 @@ export default function ContactSection() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full bg-[#0a0a0a] border border-[#2a2a2a] rounded-[10px] px-4 py-3 text-[#b8b8b8] text-[14px] resize-none focus:outline-none focus:border-[#c8f135] transition-colors placeholder:text-[#3a3a3a]"
+                  className="w-full bg-[#0a0a0a] border border-[#4d4d4d] rounded-[10px] px-4 py-3 text-[#b8b8b8] text-[14px] resize-none focus:outline-none focus:border-[#c8f135] transition-colors placeholder:text-[#3a3a3a]"
                 />
                 <span className="absolute right-3 bottom-3 text-[#c8f135]">
                   <MessageSquare className="w-4 h-4" />
@@ -163,7 +163,7 @@ export default function ContactSection() {
                     hover: { x: -30, y: 10, opacity: 0 }
                   }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="absolute -top-[10px] -right-[6px] w-12 h-[3px] bg-[#c8f135] rounded-full pointer-events-none"
+                  className="absolute -top-[10px] right-0 w-12 h-[3px] bg-[#c8f135] rounded-full pointer-events-none"
                 />
 
                 {/* Main Button */}
@@ -185,7 +185,7 @@ export default function ContactSection() {
                     hover: { x: 30, y: -10, opacity: 0 }
                   }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="absolute -bottom-[10px] -left-[6px] w-12 h-[3px] bg-[#c8f135] rounded-full pointer-events-none"
+                  className="absolute -bottom-[10px] left-0 w-12 h-[3px] bg-[#c8f135] rounded-full pointer-events-none"
                 />
               </motion.button>
             </div>

@@ -9,7 +9,7 @@ export default function ProjectsSection() {
     <section id="projects" className="bg-[#000000] py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 lg:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Project cards */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-8 lg:gap-10">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

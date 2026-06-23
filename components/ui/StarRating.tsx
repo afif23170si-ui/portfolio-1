@@ -21,14 +21,14 @@ export function StarRating({ rating, max = 5 }: StarRatingProps) {
             duration: 0.4,
             ease: [0.34, 1.56, 0.64, 1],
           }}
-          className={`text-base ${
+          className={`text-[18px] lg:text-[20px] ${
             i < rating ? "text-[#c8f135]" : "text-[#3a3a3a]"
           }`}
         >
           ★
         </motion.span>
       ))}
-      <span className="text-white text-[13px] ml-1 font-medium">
+      <span className="text-white text-[14px] lg:text-[15px] ml-1 font-medium">
         {rating}.0
       </span>
     </div>

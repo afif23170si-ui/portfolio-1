@@ -20,19 +20,19 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         delay: index * 0.12,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="sticky"
+      className="static lg:sticky"
       style={{ top: `calc(120px + ${index * 30}px)` }}
     >
       <motion.div
         whileHover={{ y: -3 }}
         transition={{ duration: 0.25 }}
-        className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-2xl overflow-hidden hover:border-[#2a2a2a] transition-colors"
+        className="bg-[#0f0f0f] border border-[#c8f135] rounded-2xl overflow-hidden hover:border-[#b8e020] transition-colors"
       >
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-0">
           {/* LEFT: Info */}
-          <div className="p-8 lg:p-10 flex flex-col justify-between">
+          <div className="px-4 py-6 lg:p-6 flex flex-col justify-between">
             <div>
-              <h3 className="text-white font-bold text-[26px] lg:text-[28px] mb-4 leading-tight">
+              <h3 className="text-white font-bold text-[20px] lg:text-[28px] mb-4 leading-tight">
                 {project.title}
               </h3>
               <p className="text-[#6b7280] text-[15px] lg:text-[17px] font-light leading-relaxed mb-2">
@@ -65,7 +65,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                     hover: { x: -30, y: 10, opacity: 0 }
                   }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="absolute -top-[10px] -right-[6px] w-12 h-[3px] bg-[#c8f135] rounded-full"
+                  className="absolute -top-[10px] right-0 w-12 h-[3px] bg-[#c8f135] rounded-full"
                 />
 
                 {/* Main Button */}
@@ -88,14 +88,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                     hover: { x: 30, y: -10, opacity: 0 }
                   }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="absolute -bottom-[10px] -left-[6px] w-12 h-[3px] bg-[#c8f135] rounded-full"
+                  className="absolute -bottom-[10px] left-0 w-12 h-[3px] bg-[#c8f135] rounded-full"
                 />
               </motion.a>
             </div>
           </div>
 
           {/* RIGHT: Screenshot */}
-          <div className="relative bg-[#12122a] rounded-2xl m-4 overflow-hidden aspect-[16/10] self-center">
+          <div className="relative bg-[#12122a] border border-[#2a2a2a] rounded-2xl m-4 lg:m-6 overflow-hidden aspect-[16/10] self-center">
             {/* Browser chrome dots */}
             <div className="absolute top-3 left-4 flex gap-1.5 z-10">
               <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
