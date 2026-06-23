@@ -17,8 +17,10 @@ export default function FooterSection() {
     <footer className="bg-[#000000] pb-10">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="relative bg-[#080808] rounded-[24px] border border-[#1a1a1a] px-6 py-5 lg:px-10 lg:py-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
-          {/* Center Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#243d10] blur-[100px] rounded-full pointer-events-none" />
+          {/* Center Glow — mobile */}
+          <div className="md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] bg-[#3a6a15] blur-[60px] rounded-full pointer-events-none opacity-90" />
+          {/* Center Glow — desktop */}
+          <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#243d10] blur-[100px] rounded-full pointer-events-none" />
           
           {/* Brand */}
           <span className="text-white font-clash font-medium text-[28px] lg:text-[32px] tracking-tight select-none relative z-10">
