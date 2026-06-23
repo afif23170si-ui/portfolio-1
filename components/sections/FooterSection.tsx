@@ -29,7 +29,7 @@ export default function FooterSection() {
 
           {/* Copyright */}
           <p className="text-white/80 text-[14px] lg:text-[16px] text-center relative z-10">
-            © 2026 Portfolio by Afif Ramadhan. All rights reserved.
+            © 2026 Afif Ramadhan. All rights reserved.
           </p>
 
           {/* Social Icons */}
